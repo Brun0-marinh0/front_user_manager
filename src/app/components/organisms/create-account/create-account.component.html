@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div class="contentInput">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="account.name" required>
+    </div>
+    <div class="contentInput">
+        <label for="lastname">Sobrenome</label>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="account.lastName" required>
+    </div>
+    <div class="contentInput">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="account.email" required>
+    </div>
+    <div class="contentInput">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" [(ngModel)]="account.password" required>
+    </div>
+    <div class="contentInput">
+        <label for="roleId">Tipo</label>
+        <select id="roleId" name="roleId" [(ngModel)]="account.roleId" required>
+            <option value="2af70220-c62c-499c-9c4f-d40f757dbc79">admin</option>
+            <option value="6222274c-7cc3-47f4-97fd-9ebd1facb4e9">padrão</option>
+        </select>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Criar conta</button>
+</form>
