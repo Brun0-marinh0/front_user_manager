@@ -1,0 +1,174 @@
+.container_character{
+    display: grid;
+    place-items: center;
+  }
+      .cls-1 {
+          fill: none;
+        }
+  
+        .cls-2 {
+          fill: #fff5ea;
+        }
+  
+        .cls-3 {
+          fill: #281e1d;
+        }
+  
+        .cls-4 {
+          fill: #e5d5c6;
+        }
+  
+        .cls-5 {
+          fill: #232323;
+        }
+  
+        .cls-6 {
+          clip-path: url(#clip-path);
+        }
+  
+        .cls-7 {
+          fill: #fff;
+        }
+  
+        svg{
+          max-width: 30rem;
+          width: 30rem;
+          min-width: 18rem;
+        }
+        @media only screen and (max-width: 600px) {
+          svg{
+            width: 100%;
+          }
+          .container_character{
+            place-items: end;
+          }
+  
+        }
+  
+        #mao_digitar{
+          transform-origin: right;
+          transform-box: fill-box;
+          transform: rotateZ(5deg) translateX(10px);
+        }
+        .isTyping{
+          animation: typing .5s infinite ease-out;
+        }
+        @keyframes typing{
+          0%{
+              transform: rotateZ(5deg) translateX(10px);
+          }
+          25%{
+              transform: rotateZ(0deg) translateX(0px);
+          }
+          50%{
+            transform: rotateZ(5deg) translateX(20px);
+          }
+          75%{
+            transform: rotateZ(0deg) translateX(20px);
+          }
+          100%{
+            transform: rotateZ(5deg) translateX(10px);
+          }
+        }
+        #hello_mouth{
+          /* display: none; */
+        }
+  
+        #open_mouth{
+          transform-origin: center;
+          transform-box: fill-box;
+          transform: translateY(9px);
+        }
+        .reactPassword{
+          display: none;
+        }
+  
+        #mao_password{
+          transform-origin: left bottom;
+          transform-box: fill-box;
+          transition: .5s;
+          transform: translateY(15rem) rotateZ(30deg) translateX(-40px);
+        }
+        .passwordTyping{
+          transform: translateY(0rem) rotateZ(0deg) !important;
+        }
+  
+        #dedos{
+          transform-origin: left bottom;
+          transform-box: fill-box;
+          transition: .5s;
+        }
+        .isShowPassword{
+          transform: rotateZ(20deg) translateX(-8px) translateY(-2px);
+        }
+  
+        #indicador{
+          transform-origin: left;
+          transform-box: fill-box;
+          transition: .5s;
+        }
+        .isShowPassword_part{
+          transform: rotateZ(-10deg) translateY(2px)
+        }
+  
+  
+        @keyframes close_eyes {
+          from{
+              opacity: 0;
+          }
+          to{
+              opacity: 1;
+          }
+        }
+        @keyframes eyes {
+          from{
+              opacity: 1;
+          }
+          to{
+              opacity: 0;
+          }
+        }
+  
+  
+  
+        /* ---------------- */
+        #folha_1{
+          transform-origin: bottom;
+          transform-box: fill-box;
+          animation: folha_front 2.5s infinite ease-in-out alternate;
+        }
+        @keyframes folha_front{
+          from{
+              transform: rotateZ(0deg) translateX(0px);
+          }
+          to{
+              transform: rotateZ(-3deg) translateX(-10px);
+          }
+        }
+  
+        #folha_2{
+          transform-origin: bottom left;
+          transform-box: fill-box;
+          animation: folha 3s infinite ease-in-out alternate;
+        }
+  
+        #folha_3{
+          transform-origin: bottom;
+          transform-box: fill-box;
+          animation: folha 3s 1.5s infinite ease-in-out alternate;
+        }
+  
+        #folha_4{
+          transform-origin: bottom right;
+          transform-box: fill-box;
+          animation: folha 3s 3s infinite ease-in-out alternate;
+        }
+  
+        @keyframes folha{
+          from{
+              transform: rotateZ(0deg);
+          }
+          to{
+              transform: rotateZ(-5deg);
+          }
+        }

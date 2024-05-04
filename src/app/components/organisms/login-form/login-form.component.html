@@ -1,11 +1,25 @@
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-    <div class="contentInput">
-        <label for="">E-mail</label>
-        <input type="email" name="email" id="email" [(ngModel)]="login.email" required>
-    </div>
-    <div class="contentInput">
-        <label for="">Senha</label>
-        <input type="password" name="password" id="password" [(ngModel)]="login.password" required>
-    </div>
-    <button type="submit" [disabled]="form.form.invalid">Entrar</button>
+    <header >
+        <div class="frameLogo">
+            <app-logo/>
+        </div>
+        <h2>Bem-vindo!</h2>
+    </header>
+    <main>
+        <div class="contentInput">
+            <label for="">E-mail</label>
+            <input type="email" name="email" id="email" (input)="handleInput()" (focus)="informType.passwordTyping = false"  [(ngModel)]="login.email" required>
+        </div>
+        <div class="contentInput">
+            <label for="">Senha</label>
+            <div class="contentPassword">
+                <input [type]="informType.isShowPassword ? 'text' : 'password'" name="password" id="password" (input)="password()" (focus)="dontLook()" [(ngModel)]="login.password" required>
+                <button type="button" (click)="showPassword()">
+                    <img *ngIf="informType?.isShowPassword" src="../../../../assets/icons/EyeSlash.svg" alt="">
+                    <img *ngIf="!informType?.isShowPassword" src="../../../../assets/icons/Eye.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <button type="submit" [disabled]="form.form.invalid">Entrar</button>
+    </main>
 </form>

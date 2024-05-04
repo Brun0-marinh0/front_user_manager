@@ -15,6 +15,9 @@ import { CreateAccountComponent } from './components/organisms/create-account/cr
 import { HomeTemplateComponent } from './components/templates/home-template/home-template.component';
 import { httpInterceptorProviders } from './http-interceptors/index';
 import { ListUsersComponent } from './components/organisms/list-users/list-users.component';
+import { IlustrationComponent } from './components/molecules/ilustration/ilustration.component';
+import { LogoComponent } from './components/atoms/logo/logo.component';
+import { NavbarComponent } from './components/molecules/navbar/navbar.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ListUsersComponent } from './components/organisms/list-users/list-users
     LoginFormComponent,
     CreateAccountComponent,
     HomeTemplateComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    IlustrationComponent,
+    LogoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

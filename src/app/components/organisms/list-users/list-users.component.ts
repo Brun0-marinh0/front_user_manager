@@ -14,7 +14,16 @@ export class ListUsersComponent {
     this.getListAll()
   }
 
+
   getListAll(): void {
-    this.accountService.getAll().subscribe((listAll) => (this.listAll = listAll))
+    this.accountService.getAll().subscribe(
+      (data: listAll[]) => {
+        this.listAll = data;
+        console.log('Dados obtidos:', this.listAll);
+      },
+      (error) => {
+        console.error('Erro ao obter dados:', error);
+      }
+    );
   }
 }

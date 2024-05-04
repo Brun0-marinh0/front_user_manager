@@ -4,7 +4,53 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --bgMain:#fbfbfb;
+    --colorFontDefault: #232323 ;
+}
+$bothHeights: 2.5rem;
 
 body{
     font-family: "Poppins", sans-serif;
+    color: var(--colorFontDefault);
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    height: $bothHeights;
+    border-radius: .3rem;
+}
+
+input{
+    border-radius: .3rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #e9e8e4;
+    height: $bothHeights;
+    padding: 0 .4rem;
+}
+
+.contentInput{
+    display: grid;
+    label{
+        font-size: .8rem;
+        line-height: 12px;
+        font-weight: bold;
+    }
+}
+
+.contentPassword{
+    display: flex;
+    background: #e9e8e4;
+    border-radius: .3rem;
+    button{
+        height: $bothHeights;
+        width: $bothHeights;
+        background: none;
+        display: grid;
+        place-items: center;
+        padding: .2rem;
+    }
 }
