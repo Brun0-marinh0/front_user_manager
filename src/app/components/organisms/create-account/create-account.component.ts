@@ -14,6 +14,9 @@ export class CreateAccountComponent {
     password: '',
     roleId: ''
   }
+
+  showModal = false
+
   constructor(
     private accountService: AccountService
   ){}
@@ -26,5 +29,8 @@ export class CreateAccountComponent {
     } catch (error){
       console.error(error)
     }
+  }
+  modal(){
+    this.showModal = !this.showModal
   }
 }

@@ -1,0 +1,59 @@
+header{
+    height: 4rem;
+    border-bottom: 1px solid #dcdcdc;
+    button{
+        background-color: var(--blue);
+        color: var(--bgMain);
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        img{
+            width: 1rem;
+        }
+    }
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(17, 17, 72, 0.455);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+
+    form{
+        display: grid;
+        gap: 1rem;
+        width: 33rem;
+        padding: 2rem;
+        background-color: var(--bgMain);
+        border-radius: .5rem;
+        .inform{
+            display: flex;
+            justify-content: space-between;
+            button{
+                background: none;
+                img{
+                    transform: rotateZ(45deg);
+                    filter: invert(1);
+                }
+            }
+        }
+        .contentButton{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                background-color: var(--colorFontDefault);
+                color: var(--bgMain);
+            }
+            button:disabled{
+                background-color: var(--colorFontDefault);
+                color: var(--bgMain);
+                opacity: .5;
+            }
+        }
+    }
+}

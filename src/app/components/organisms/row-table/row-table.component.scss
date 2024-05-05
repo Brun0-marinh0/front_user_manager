@@ -1,0 +1,62 @@
+.row{
+    padding: .6rem;
+    width: 100%;
+    display: grid;
+    gap: .5rem;
+    grid-template: 1fr / repeat(3, 1fr) min-content min-content;
+    align-items: center;
+    border-bottom: 1px solid #dcdcdc;
+    .statusIsActivado{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: .8rem;
+    }
+    .statusIsActivado::before{
+        content: " ";
+        display: inline-block;
+        width: .6rem;
+        height: .6rem;
+        border-radius: 100%;
+        background-color: #c0c0c0;
+    }
+    .status{
+        padding: 0.3rem 1rem;
+        width: min-content;
+        height: min-content;
+        display: flex;
+        gap: .5rem;
+        border-radius: .3rem;
+        font-weight: 500;
+        font-size: .8rem;
+        img{
+            width: .8rem;
+        }
+    }
+    .admin{
+        background-color: #E2EFFF;
+        color:#1955DB ;
+    }
+    .user{
+        background-color: #F0F1F3;
+        color: #2A3445;
+    }
+
+    .active::before{
+        background-color: var(--green);
+    }
+
+    .notActive::before{
+        background-color: var(--red);
+    }
+    button{
+        border: 2px solid #e0e0e0;
+        background-color: #F0F1F3;
+        font-weight: 500;
+        font-size: .8rem;
+        padding: 0.5rem 0.7rem;
+        img{
+            width: 1rem;
+        }
+    }
+}

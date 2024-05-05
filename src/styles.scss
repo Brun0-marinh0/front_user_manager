@@ -7,6 +7,9 @@
 :root{
     --bgMain:#fbfbfb;
     --colorFontDefault: #232323 ;
+    --green: #0BA16C;
+    --red: #EF4E50;
+    --blue:#1955DB;
 }
 $bothHeights: 2.5rem;
 
@@ -20,9 +23,11 @@ button{
     border: none;
     height: $bothHeights;
     border-radius: .3rem;
+    white-space: nowrap;
+    padding: 0.5rem 0.7rem;
 }
 
-input{
+input, select{
     border-radius: .3rem;
     width: 100%;
     outline: none;

@@ -1,6 +1,5 @@
-<ul>
-  <li *ngFor="let user of listAll">
-    Nome: {{ user.name }}
-  </li>
-</ul>
+<div *ngFor="let user of listAll">
+  <app-row-table [dataUser]="user"/>
+</div>
+
 

@@ -1,0 +1,20 @@
+<div class="row">
+    <p>{{dataUser.name}} {{dataUser.lastName}}</p>
+    <span class="status admin" *ngIf="dataUser.role.description === 'admin'" >
+        <img src="../../../../assets/icons/admin.svg" alt="">
+        admim
+    </span>
+    <span class="status user" *ngIf="dataUser.role.description === 'common'" >
+        <img src="../../../../assets/icons/user.svg" alt="">
+        usuário
+    </span>
+    <p *ngIf="dataUser.isActivated" class="statusIsActivado" [ngClass]="{'active' : dataUser.isActivated}">Ativado</p>
+    <p *ngIf="!dataUser.isActivated" class="statusIsActivado" [ngClass]="{'notActive' : !dataUser.isActivated}">Desativado</p>
+    <button>
+        <img src="../../../../assets/icons/pencil.svg" alt="">
+        editar
+    </button>
+    <button>
+        <img src="../../../../assets/icons/trash.svg" alt="">
+    </button>
+</div>

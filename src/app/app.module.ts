@@ -18,6 +18,7 @@ import { ListUsersComponent } from './components/organisms/list-users/list-users
 import { IlustrationComponent } from './components/molecules/ilustration/ilustration.component';
 import { LogoComponent } from './components/atoms/logo/logo.component';
 import { NavbarComponent } from './components/molecules/navbar/navbar.component';
+import { RowTableComponent } from './components/organisms/row-table/row-table.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { NavbarComponent } from './components/molecules/navbar/navbar.component'
     ListUsersComponent,
     IlustrationComponent,
     LogoComponent,
-    NavbarComponent
+    NavbarComponent,
+    RowTableComponent
   ],
   imports: [
     BrowserModule,
