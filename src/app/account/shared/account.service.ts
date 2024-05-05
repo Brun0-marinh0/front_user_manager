@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { jwtDecode } from "jwt-decode";
-import { Observable } from 'rxjs';
+import { Observable, retryWhen } from 'rxjs';
 import { listAll } from '../../../interfaces/listAll';
 
 
@@ -86,5 +86,14 @@ export class AccountService {
 
   getAll(): Observable<listAll[]>{
     return this.http.get<listAll[]>(`${environment.api}/users`)
+  }
+  getCount(): Observable<any>{
+    return this.http.get<any>(`${environment.api}/users/count`)
+  }
+  putUser(user: listAll): Observable<any>{
+    return this.http.put<listAll>(`${environment.api}/users/`, user);
+  }
+  deleteUser(id:string): Observable<any>{
+    return this.http.delete<any>(`${environment.api}/users/${id}`)
   }
 }

@@ -1,0 +1,40 @@
+
+<button class="option" (click)="modal()">
+    <img src="../../../../assets/icons/pencil.svg" alt="">
+    editar
+</button>
+
+<div class="modal" *ngIf="showModal">
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="inform">
+            <h3> Editar </h3>
+            <button (click)="modal()">
+                <img src="../../../../assets/icons/plus.svg" alt="">
+            </button>
+        </div>
+        <div class="contentInput">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" [(ngModel)]="account.name" required>
+        </div>
+        <div class="contentInput">
+            <label for="lastname">Sobrenome</label>
+            <input type="text" id="lastname" name="lastname" [(ngModel)]="account.lastName" required>
+        </div>
+        <div class="contentInput">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" [(ngModel)]="account.email" required>
+        </div>
+        <div class="contentInput">
+            <label for="roleId">Tipo</label>
+            <select id="roleId" name="roleId" [(ngModel)]="account.isActivated" required>
+                <option [value]="true" >ativado</option>
+                <option [value]="false">desativado</option>
+            </select>
+        </div>
+        <div class="contentButton">
+            <button type="submit" [disabled]="form.invalid">Atualizar conta</button>
+        </div>
+    </form>
+</div>
+
+

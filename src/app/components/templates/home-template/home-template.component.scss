@@ -1,0 +1,14 @@
+.graph{
+    display: flex;
+    justify-content: center;
+}
+.frameAccount{
+    display: grid;
+    grid-template: 1fr / 1fr .5fr;
+    gap: 1rem;
+
+    @media (max-width: 768px){
+        gap: 0rem;
+        grid-template: 1fr 1fr/ 1fr ;
+    }
+}

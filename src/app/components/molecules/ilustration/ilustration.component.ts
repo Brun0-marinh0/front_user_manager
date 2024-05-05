@@ -32,14 +32,11 @@ export class IlustrationComponent {
 
   ngOnInit() {
     this.eyes();
-    // this.resetEyes();
+    this.resetEyes();
     setTimeout(() => {
       this.hello_mouth = false
     }, 1000)
 
-    setTimeout(() => {
-      this.eyes();
-    }, 3500)
   }
 
   eyes() {
@@ -53,14 +50,14 @@ export class IlustrationComponent {
     });
   }
 
-  // resetEyes() {
-  //   this.openEyesTimer = this.ngZone.runOutsideAngular(() => {
-  //     setTimeout(() => {
-  //       this.ngZone.run(() => {
-  //         this.eyes()
-  //       });
-  //     }, 3500);
-  //   });
-  // }
+  resetEyes() {
+    this.openEyesTimer = this.ngZone.runOutsideAngular(() => {
+      setInterval(() => {
+        this.ngZone.run(() => {
+          this.eyes()
+        });
+      }, 3500);
+    });
+  }
   
 }

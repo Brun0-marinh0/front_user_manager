@@ -24,8 +24,8 @@ export class CreateAccountComponent {
   async onSubmit(){
     try {
       const result = await this.accountService.createAccount(this.account)
-
       console.log('conta criada com sucesso!',result)
+      window.location.reload();
     } catch (error){
       console.error(error)
     }

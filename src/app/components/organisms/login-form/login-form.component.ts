@@ -19,6 +19,8 @@ export class LoginFormComponent {
     passwordTyping: false,
     isShowPassword: false
   }
+
+  isLoading = false
   
 
   typingTimer: any
@@ -30,14 +32,17 @@ export class LoginFormComponent {
   ){}
 
   async onSubmit() {
+    this.isLoading = true
     try{
       const result = await this.accountService.login(this.login)
       console.log(`Login efetuado: ${result}`)
-
+      this.isLoading = false
       this.router.navigate([''])
     }catch(error){
       console.error(error)
     }
+    this.isLoading = false
+    
   }
 
   handleInput(){

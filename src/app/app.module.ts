@@ -19,6 +19,12 @@ import { IlustrationComponent } from './components/molecules/ilustration/ilustra
 import { LogoComponent } from './components/atoms/logo/logo.component';
 import { NavbarComponent } from './components/molecules/navbar/navbar.component';
 import { RowTableComponent } from './components/organisms/row-table/row-table.component';
+import { GraphComponent } from './components/molecules/graph/graph.component';
+import { DeleteUserComponent } from './components/molecules/delete-user/delete-user.component';
+import { UpdateUserComponent } from './components/organisms/update-user/update-user.component';
+import { SignOutComponent } from './components/atoms/sign-out/sign-out.component';
+import { LoadingComponent } from './components/molecules/loading/loading.component';
+
 
 
 @NgModule({
@@ -36,7 +42,12 @@ import { RowTableComponent } from './components/organisms/row-table/row-table.co
     IlustrationComponent,
     LogoComponent,
     NavbarComponent,
-    RowTableComponent
+    RowTableComponent,
+    GraphComponent,
+    DeleteUserComponent,
+    UpdateUserComponent,
+    SignOutComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

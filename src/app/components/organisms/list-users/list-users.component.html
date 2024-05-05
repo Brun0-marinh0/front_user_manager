@@ -1,5 +1,9 @@
-<div *ngFor="let user of listAll">
-  <app-row-table [dataUser]="user"/>
+<app-loading *ngIf="isLoading" />
+<div class="cardList">
+  <div *ngFor="let user of listAll">
+    <app-row-table [dataUser]="user"/>
+  </div>
 </div>
+
 
 

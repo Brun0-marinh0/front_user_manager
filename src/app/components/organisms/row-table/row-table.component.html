@@ -10,11 +10,8 @@
     </span>
     <p *ngIf="dataUser.isActivated" class="statusIsActivado" [ngClass]="{'active' : dataUser.isActivated}">Ativado</p>
     <p *ngIf="!dataUser.isActivated" class="statusIsActivado" [ngClass]="{'notActive' : !dataUser.isActivated}">Desativado</p>
-    <button>
-        <img src="../../../../assets/icons/pencil.svg" alt="">
-        editar
-    </button>
-    <button>
-        <img src="../../../../assets/icons/trash.svg" alt="">
-    </button>
+
+    <app-update-user [user]="dataUser"/>
+    <app-delete-user [idUser]="dataUser.id" [nameUser]="dataUser.name" />
+    
 </div>

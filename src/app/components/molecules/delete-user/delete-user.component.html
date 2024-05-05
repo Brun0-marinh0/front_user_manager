@@ -1,0 +1,16 @@
+<button class="option" (click)="showModal()">
+    <img src="../../../../assets/icons/trash.svg" alt="">
+</button>
+
+<div class="modal" *ngIf="isShow">
+    <div class="frame">
+        <header>
+            <h3>deseja realmente deletar estar conta?</h3>
+            <p>de: {{nameUser}} </p>
+        </header>
+        <div class="contentButton">
+            <button (click)="showModal()" >não</button>
+            <button (click)="delete(idUser)">sim, deletar</button>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@ import { AccountService } from '../../../account/shared/account.service';
   styleUrl: './list-users.component.scss'
 })
 export class ListUsersComponent {
+  isLoading = true
   listAll: listAll[] = []
 
   constructor(private accountService: AccountService ){
@@ -20,10 +21,12 @@ export class ListUsersComponent {
       (data: listAll[]) => {
         this.listAll = data;
         console.log('Dados obtidos:', this.listAll);
+        this.isLoading = false
       },
       (error) => {
         console.error('Erro ao obter dados:', error);
       }
+     
     );
   }
 }
