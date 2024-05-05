@@ -46,7 +46,7 @@ O estilo do projeto foi desenvolvido utilizando SCSS puro, sem o uso de bibliote
 
 ## Links
 
-- [Link para o projeto](URL_DO_SEU_PROJETO)
+- [Link para o projeto](https://main--indtusermanager.netlify.app/login)
 - [Documentação do Angular](https://angular.io/docs)
 
 ## Melhorias Futuras
