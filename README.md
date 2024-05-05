@@ -1,27 +1,55 @@
-# FrontAccount
+# Frontend em Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Este é o frontend desenvolvido com Angular 17 para gerenciar usuários e visualizar informações de forma detalhada, incluindo gráficos criados com a biblioteca D3.js.
 
-## Development server
+## Funcionalidades Principais
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Cadastro, visualização, edição e exclusão de usuários.
+- Visualização em diversas formas, incluindo listagem com níveis de acesso e gráficos interativos.
 
-## Code scaffolding
+## Estrutura de Atomic Design
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto foi organizado utilizando o conceito de Atomic Design, dividindo as funcionalidades em:
 
-## Build
+- **Atoms**: Componentes individuais simples.
+- **Molecules**: Combinação de atoms para formar componentes mais complexos.
+- **Organisms**: Combinação de molecules para formar seções da interface.
+- **Templates**: Estruturação de páginas utilizando organisms.
+- **Pages**: Páginas completas do sistema.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Estilo
 
-## Running unit tests
+O estilo do projeto foi desenvolvido utilizando SCSS puro, sem o uso de bibliotecas externas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Pré-requisitos
 
-## Running end-to-end tests
+- Visual Studio Code instalado.
+- Node.js versão 20.12.2 instalado.
+- Yarn versão 1.22.22 instalado.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Tecnologias Utilizadas
 
-## Further help
+- Angular 17
+- TypeScript
+- SCSS (Sass)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Acesso ao Sistema
+
+**Email:** master@admin.com  
+**Senha:** admin123
+
+## Instruções de Uso
+
+1. Clone o repositório.
+2. Instale as dependências usando o comando `yarn install`.
+3. Inicie o servidor de desenvolvimento com `yarn start`.
+
+## Links
+
+- [Link para o projeto](URL_DO_SEU_PROJETO)
+- [Documentação do Angular](https://angular.io/docs)
+
+## Melhorias Futuras
+
+- Implementação de responsividade em todas as telas.
+- Adição de mais funcionalidades, como filtros avançados e exportação de dados.
