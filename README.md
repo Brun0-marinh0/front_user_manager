@@ -49,7 +49,4 @@ O estilo do projeto foi desenvolvido utilizando SCSS puro, sem o uso de bibliote
 - [Link para o projeto](https://main--indtusermanager.netlify.app/login)
 - [Documentação do Angular](https://angular.io/docs)
 
-## Melhorias Futuras
 
-- Implementação de responsividade em todas as telas.
-- Adição de mais funcionalidades, como filtros avançados e exportação de dados.
